@@ -1,0 +1,90 @@
+{
+  "_readme": "Copy this file to config.json and edit it. config.json is git-ignored, so your own settings never end up in the repository. Every key here can also be overridden by a CLI flag.",
+
+  "site": {
+    "home_url": "https://www.typingclub.com",
+    "course_url": "https://www.typingclub.com/sportal/program-3.game",
+    "lesson_url_template": "{course_url}?lesson={lesson}"
+  },
+
+  "selectors": {
+    "frame_keyword": "typing",
+    "unit_selector": "span.token_unit",
+    "line_selector": "span.line",
+    "typed_selector": "span.token_unit._vld, span.token_unit._err",
+    "min_units": 20
+  },
+
+  "typing": {
+    "wpm_min": 55,
+    "wpm_max": 75,
+    "jitter": 0.22,
+    "mistake_rate": 0.0,
+    "max_retry": 1,
+    "retry_boost_min": 6,
+    "retry_boost_max": 14,
+    "overhead_compensation": 0.80,
+    "min_key_gap": 0.06,
+    "drift_sigma": 0.015,
+    "drift_floor": 0.95,
+    "drift_ceil": 1.05,
+    "distracted_chance": 0.04,
+    "distracted_min_units": 1.0,
+    "distracted_max_units": 3.0,
+    "word_pause_after_min": 0.0,
+    "word_pause_after_max": 0.9,
+    "word_pause_before_min": 0.1,
+    "word_pause_before_max": 0.5
+  },
+
+  "browser": {
+    "channel": "auto",
+    "exe_path": "",
+    "profile_dir": "",
+    "debug_port": 9222,
+    "viewport_width": 1440,
+    "viewport_height": 900,
+    "locale": "zh-CN",
+    "no_proxy": false,
+    "proxy_server": "",
+    "extra_args": ["--disable-blink-features=AutomationControlled"]
+  },
+
+  "login": {
+    "username_field": "input[name=username]",
+    "password_field": "input[name=password]",
+    "submit_label": "Log in",
+    "username_env": "TC_USER",
+    "password_env": "TC_PASS",
+    "success_url_fragment": "/student/",
+    "wait_seconds": 300
+  },
+
+  "network": {
+    "frame_wait_seconds": 180,
+    "page_timeout_ms": 60000,
+    "reload_after_retry_clicks": 3,
+    "max_reloads": 2,
+    "diagnostic_hosts": ["api.edclub.com", ".edclub.app"]
+  },
+
+  "messages": {
+    "activity_error_hints": [
+      "This Activity Didn't Load",
+      "此活动未能加载",
+      "无法加载活动"
+    ],
+    "retry_labels": ["Try again", "再试一次", "重试"]
+  },
+
+  "result": {
+    "speed_unit": "字/分钟",
+    "actual_speed_label": "速度",
+    "required_speed_label": "要求速度",
+    "target_speed_label": "目标速度",
+    "accuracy_label": "准确率",
+    "required_accuracy_label": "要求准确率",
+    "score_label": "得分",
+    "screenshot_path": "typing_result.png"
+  }
+}
